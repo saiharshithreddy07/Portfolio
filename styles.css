@@ -1087,7 +1087,7 @@ body {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
@@ -1098,6 +1098,8 @@ body {
     overflow: hidden;
     transition: all var(--transition-normal);
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card::before {
@@ -1126,20 +1128,10 @@ body {
     box-shadow: 0 25px 60px rgba(3, 239, 98, 0.2);
 }
 
-.project-card.featured {
-    grid-column: span 2;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
 .project-image {
     position: relative;
-    height: 180px;
+    height: 200px;
     overflow: hidden;
-}
-
-.project-card.featured .project-image {
-    height: 100%;
 }
 
 .project-placeholder {
@@ -3056,6 +3048,10 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .contact-grid {
         grid-template-columns: 1fr;
     }
@@ -3073,15 +3069,6 @@ body {
 
     .skill-card-large {
         grid-column: span 1;
-    }
-
-    .project-card.featured {
-        grid-column: span 1;
-        display: block;
-    }
-
-    .project-card.featured .project-image {
-        height: 220px;
     }
 }
 
